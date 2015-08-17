@@ -1,0 +1,76 @@
+
+body {
+     margin: 0;
+     padding: 0;
+     text-align: center;
+     background-image: url("http://i.imgur.com/6DSC48S.jpg");
+     background-size: auto;
+     background-repeat: no-repeat;
+}
+
+h1 {
+	color: white;
+}
+
+h2 {
+	color: purple;
+	opacity: 0.8;
+}
+
+.racetrack {
+    width: 50%;
+    height: 500px;
+    margin: 0 auto;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.track {
+	width: 20%;
+	height: 80%;
+	padding: 30px;
+	list-style-type: none;
+	background-color: black;
+	border: 1px solid white ;
+
+
+}
+.left-lane { 
+	float: left;
+	margin-left: 125px;
+}
+
+.right-lane {
+	float: right;
+	margin-right: 125px;
+
+}
+.leftCar {
+    list-style-position: inside;
+    padding: 0px;
+    margin: 0px;
+}
+
+.leftCar img {
+	height: 80px;
+	width: 60px;
+	position: 
+}
+
+.rightCar {
+	list-style-position: inside;
+    padding: 0px;
+    margin: 0px;
+    
+}
+.rightCar img {
+	height: 100px;
+	width: 150px;
+}
+
+
+
+
+
+
+
