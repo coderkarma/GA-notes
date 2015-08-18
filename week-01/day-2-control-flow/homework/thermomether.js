@@ -51,6 +51,7 @@ function convertTemp (temp, type) {
 console.log(convertTemp(34, "c"));
 
 
+//
 
 
 
