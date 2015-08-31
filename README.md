@@ -10,7 +10,52 @@
 <!-- ##Week 7 -->
 <!-- ##Week 6 -->
 <!-- ##Week 5 -->
-<!-- ##Week 4 -->
+
+##Week 4 -- Users
+
+<table>
+  <tr>
+    <th></th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <tr>
+    <td>Drills</td>
+    <td>Binary Search (Justin)</td>
+    <td>Secret Keys (Justin / Ilias)</td>
+    <td>Warm Up Exercise</td>
+    <td>Warm Up Exercise</td>
+    <td>Review (Team)</td>
+  </tr>
+  <tr>
+    <td>Module1</td>
+    <td>Mongo Relationships (Justin)</td>
+    <td>Cookies (Nathan)</td>
+    <td>Authorization: Express Bcrypt (Ilias)</td>
+    <td>Lab (Nathan)</td>
+    <td>Review (Team)</td>
+  </tr>
+  <tr>
+    <td>Module2</td>
+    <td>Mongo Relationships (Justin)</td>
+    <td>Sessions (Nathan)</td>
+    <td>Authorization: Express Bcrypt (Ilias)</td>
+    <td>Project One: Intro (Team)</td>
+    <td>Project One</td>
+  </tr>
+  <tr>
+    <td>HW</td>
+    <td>Reading</td>
+    <td>Reading</td>
+    <td>Review</td>
+    <td>Project</td>
+    <td><!-- LEAVE BLANK --></td>
+  </tr>
+</table>
+
 
 ##Week 3 -- REST & CRUD
 <table>
@@ -44,14 +89,14 @@
     <td>Intro Express: <a href="week-03/day-02-intro-express/dusk-assets">Static Assets</a> (Nathan)</td>
     <td>Todo Lab: UD (Ilias)</td>
     <td><a href="https://github.com/sf-wdi-21/bite_me_mongo_express">Express Mongo Lab</a> (Nathan)</td>
-    <td>Catchphrase Project (Ilias)</td>
+    <td><a href="week-03/day-05">Catchphrase Project</a></td>
   </tr>
   <tr>
     <td>HW</td>
     <td><a href="week-03/day-02-intro-express/dawn-routing/README.md">Express Hello World</a> (Nathan)</td>
     <td><a href="https://github.com/sf-wdi-21/notes/blob/master/week-03/day-03-crud-express/rest.md">RESTful convention</a> (Ilias)</td>
     <td><a href="week-03/day-04-mongo-crud/dawn-mongo/readme.md">Mongo CRUD</a>(Justin)</td>
-    <td>TBD (Ilias)</td>
+    <td><a href="https://vimeo.com/36579366">Bret Victor: Inventing on Principle</a> (Ilias)</td>
     <td><!-- LEAVE BLANK --></td>
   </tr>
 </table>
