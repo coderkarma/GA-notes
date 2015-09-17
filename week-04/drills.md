@@ -8,28 +8,27 @@ Serial Version:
 ```javascript
 
 function binarySearch(searchArray, searchElement) {
- 
-    var min = 0;
-    var max = searchArray.length - 1;
-    var mid;
-    var currentElement;
- 
-    while (min <= max) {
-        mid = (min + max) / 2 | 0;
-        currentElement = searchArray[mid];
- 
-        if (currentElement < searchElement) {
-            min = mid + 1;
-        }
-        else if (currentElement > searchElement) {
-            max = mid - 1;
-        }
-        else {
-            return mid;
-        }
+  var min = 0;
+  var max = searchArray.length - 1;
+  var mid;
+  var currentElement;
+
+  while (min <= max) {
+    mid = (min + max) / 2 | 0;
+    currentElement = searchArray[mid];
+
+    if (currentElement < searchElement) {
+        min = mid + 1;
     }
- 
-    return -1;
+    else if (currentElement > searchElement) {
+        max = mid - 1;
+    }
+    else {
+        return mid;
+    }
+  }
+
+  return -1;
 }
 
 
@@ -95,7 +94,7 @@ To counter rainbow tables, websites began using a technique called **salting** w
 
 *We can still do our part!  To make it extremely difficult for computers to guess your password, consider using 4 random words strung together.*  
 
-##Day - 03: Bubble Sort
+##Day - 3: Bubble Sort
 
 Pre-work: [First, some Hungarian ("Csángó") folk dance](https://www.youtube.com/watch?v=lyZQPjUT5B4)
 
@@ -182,4 +181,115 @@ a = b;
 b = temp;
 ```
 
-You may use a conventional for loop
+You may use a conventional for loop.
+
+###One possible solution to bubble sort: 
+
+```javascript
+function bubbleSort(array) {
+  var end = array.length - 1;
+  // create a swapped switch (true/false)
+  var swapped = true;
+  // while our switch is 'true'
+  while(swapped){
+    //console.log(array);
+    // flip the swapped switch to false
+    swapped = false;
+    for(var i = 0; i < end; ++i) {
+      // If an element is greater than its neighbor
+      if (array[i] > array[i+1]) {
+        // swap the element and its neighbor
+        var temp = array[i];
+        array[i] = array[i+1];
+        array[i+1] = temp;
+        // flip the switch to true
+        swapped = true;
+      }
+    }
+    end--;
+  }
+};
+
+```
+
+##Day - 4  Merge sort!
+
+###Why Merge Sort?
+Merge sort is the first powerful sorting algorithm that you will encounter in the wilds of the real world (baked into Safari and Firefox.)  It uses an extremely efficient application of the 'Divide and Conquer' concept to lists of elements.  We worked on Bubble Sort yesterday, now let us up our game and work on Merge Sort!
+
+Merge Sort works on the basic principal of dividing your list into sub-lists (recursively) until your sub-lists are of length one or zero.  Once your sub-lists are at that size, you merge with a neighboring sub-list.  When you merge them, you merge them in ascending or descending order, depending on your implementation.  
+
+![Merge Sort visualization](https://webdocs.cs.ualberta.ca/~holte/T26/Lecture6Fig6.gif)
+
+There are TWO functions that work together to accomplish a Merge Sort:
+
+-  A mergeSort function that takes an array, splits the array in two, and calls a merge function.  The mergeSort function **is recursive**.  Try to remember the prescribed function structuring we recommended. 
+
+```javascript
+
+function mergeSort(arr) {
+  // if the array is length one or zero, return the array
+  if (arr.length < 2) {
+    return arr;
+  }
+  // figure out the middle point
+  var middle = parseInt(arr.length / 2);
+  
+  // create an array of the left half
+  var left = arr.slice(0, middle);
+
+  // create an array of right half
+  var right = arr.slice(middle, arr.length);
+
+  // call merge on a recursively called left half and right half
+  return merge(mergeSort(left), mergeSort(right));
+}
+ 
+
+
+```
+
+-  A merge function that takes two arrays as parameters, looks at the the first elements of the two lists, and assembles a resulting list based on the two lists 'zipped' together by pushing the lowest to highest valued elements. The merge function **is not recursive**.
+
+
+```javascript
+
+function merge(left, right) {
+  var result = [];
+
+  // while both arrays have elements in them, zip them together
+  while (left.length && right.length) {
+    // if the left array first element is less than the right array first element, push to result
+    if (left[0] <= right[0]) {
+        result.push(left.shift());\
+    // else push the right array first element to result
+    } else {
+        result.push(right.shift());
+    }
+  }
+
+  // if left is the only array with elements, push them all in
+  while (left.length) {
+      result.push(left.shift());
+  // if right is the only array with elmeents, push them all in
+  }
+  while (right.length) {
+    result.push(right.shift());
+  }
+  // return final result
+  return result;
+}
+
+
+```
+
+###Make your own Mergesort implementation!
+Create a mergeSort that will sort a list of student names from this class!
+
+```javascript
+[ 'Tika','Keala','Neil','Sharon', 'Francis', 'Nathan',
+  'James', 'Olivia', 'JustinR', 'Peter', 'Jamie', 'Kristian', 'Stephen',
+  'Melissa', 'JustinA', 'Tom', 'Daniel', 'Ian', 'Heather', 'Marcel',
+  'Humberto', 'Eric', 'Darragh', 'Sakina', 'Nick', 'Lisa', 'Sarad',
+  'Katie',  'Bradley' ]
+```
